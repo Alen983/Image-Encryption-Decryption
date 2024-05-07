@@ -33,3 +33,5 @@ This project is an image encryption/decryption application developed using Pytho
 - **Secure key generation and management**: Incorporating a feature to generate and manage encryption keys securely.
 - **Batch processing**: Providing options for batch processing multiple images at once.
 - **GUI enhancements**: Enhancing the GUI with more intuitive controls and visual feedback.
+
+<!-- Your hidden text goes here -->
