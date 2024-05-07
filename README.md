@@ -34,4 +34,48 @@ This project is an image encryption/decryption application developed using Pytho
 - **Batch processing**: Providing options for batch processing multiple images at once.
 - **GUI enhancements**: Enhancing the GUI with more intuitive controls and visual feedback.
 
-<!-- Your hidden text goes here -->
+<!-- Here's a breakdown of the code:
+
+1. `from tkinter import *`: This line imports all the available classes, functions, and constants from the Tkinter library. It's a common practice to import everything from Tkinter when working with GUIs.
+
+2. `from tkinter import filedialog`: This line specifically imports the `filedialog` module from Tkinter. This module provides functions for creating file dialog boxes, which allow the user to select files or directories from their file system.
+
+3. `root = Tk()`: This line creates the main window of the application. `Tk()` is a class in Tkinter that represents the main window.
+
+4. `root.geometry("300x200")`: This line sets the initial size of the main window to 300 pixels wide and 200 pixels tall.
+
+5. `root.title("Image Encryptor/Decryptor")`: This line sets the title of the main window to "Image Encryptor/Decryptor".
+
+6. `def encrypt_image()`: This function is responsible for encrypting an image. However, it doesn't contain the actual encryption logic. Instead, it calls the `perform_encryption()` function with the argument True.
+
+7. `def decrypt_image()`: This function is responsible for decrypting an image. Similar to the `encrypt_image()` function, it doesn't contain the actual decryption logic. Instead, it calls the `perform_encryption()` function with the argument False.
+
+8. `file_path = filedialog.askopenfilename(filetypes=[('JPG files', '*.jpg')])`: This line opens a file dialog box that allows the user to select a JPG image file from their file system. The selected file path is stored in the `file_path` variable.
+
+9. `if file_path:`: This checks if a file path was selected. If a file path was selected, the code inside the `try` block will execute.
+
+10. `key = int(key_entry.get())`: This line retrieves the encryption/decryption key entered by the user in an entry widget (likely a text box) called `key_entry`. The key is converted from a string to an integer using the `int` function.
+
+11. `with open(file_path, 'rb') as file:`: This line opens the selected image file in binary read mode.
+
+12. `image_data = bytearray(file.read())`: This line reads the contents of the image file and stores it in a bytearray called `image_data`.
+
+13. `for index, value in enumerate(image_data)`: This loop iterates over each byte in the `image_data` bytearray, with `index` representing the index of the byte and `value` representing the byte value.
+
+14. `image_data[index] = value ^ key`: This line performs the XOR operation between each byte in `image_data` and the encryption/decryption key. The result is stored back in `image_data` at the same index, effectively encrypting (or decrypting) the byte.
+
+15. `with open(file_path, 'wb') as file:`: This line opens the same image file in binary write mode.
+
+16. `file.write(image_data)`: This line writes the modified (encrypted or decrypted) `image_data` back to the image file, overwriting the original contents.
+
+17. `action = "Encrypted" if is_encrypt else "Decrypted"`: This line sets the `action` variable to either "Encrypted" or "Decrypted" based on the value of the `is_encrypt` parameter passed to the function.
+
+18. `label_status.config(text=f"{action} Successfully")`: This line updates a label widget called `label_status` with the text indicating whether the image was successfully encrypted or decrypted.
+
+19. The `except` blocks handle different types of exceptions that may occur during the encryption/decryption process, such as an invalid key (non-numeric input) or other exceptions. The error messages are displayed in the `label_status` widget.
+
+20. In the `finally` block, `key_entry.delete(0, END)` clears the contents of the `key_entry` widget after the operation is completed, allowing the user to enter a new key for the next operation.
+ 
+Good job.  
+You've breached it.  
+-->
