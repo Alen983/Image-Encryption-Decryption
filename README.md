@@ -1,7 +1,7 @@
 # Image Encryption Decryption  
 
 <p align="center">
-  <img width=50% height=40% src="enc.gif" />
+  <img width=50% height=40% src="enc.gif" />  
   Image : Pen & Paper: Jocelyn Tsaih
 
 </p>
