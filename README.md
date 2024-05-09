@@ -2,10 +2,11 @@
 
 <p align="center">
   <img width=50% height=40% src="enc.gif" />  
-    
-  Image : Pen & Paper: Jocelyn Tsaih
+</p>  
 
-</p>
+<p align="center">
+ Pen & Paper: Jocelyn Tsaih
+</p> 
 
 This project is an image encryption/decryption application developed using Python and the Tkinter library for creating graphical user interfaces (GUIs). The application allows users to encrypt and decrypt image files (specifically JPG files) using a simple XOR encryption algorithm with a user-provided numerical key.
 
